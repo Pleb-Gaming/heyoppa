@@ -1,5 +1,6 @@
 from discord.ext import commands
 from discord.ext.commands import Bot
+from boto.s3.connection import S3Connection
 import asyncio
 import discord
 import os
@@ -12,7 +13,7 @@ hiimage = "http://logoonline.mtvnimages.com/uri/mgid:file:http:shared:s3.amazona
 byeimage = "https://metrouk2.files.wordpress.com/2018/03/rpdr_fi0.gif"
 channel = None
 
-token = os.getenv['token']
+token = S3Connefction(os.getenv['token'])
 
 @bot.event
 async def on_ready():
