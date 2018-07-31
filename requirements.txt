@@ -1,1 +1,2 @@
 git+https://github.com/Rapptz/discord.py@rewrite
+boto==2.49.0
