@@ -13,7 +13,7 @@ hiimage = "http://logoonline.mtvnimages.com/uri/mgid:file:http:shared:s3.amazona
 byeimage = "https://metrouk2.files.wordpress.com/2018/03/rpdr_fi0.gif"
 channel = None
 
-token = S3Connection(os.getenv('token'))
+token = S3Connection(os.environ['token'])
 
 @bot.event
 async def on_ready():
