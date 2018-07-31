@@ -13,13 +13,11 @@ hiimage = "http://logoonline.mtvnimages.com/uri/mgid:file:http:shared:s3.amazona
 byeimage = "https://metrouk2.files.wordpress.com/2018/03/rpdr_fi0.gif"
 channel = None
 
-token = S3Connection(os.environ['token'])
-
 @bot.event
 async def on_ready():
 	print("Bot is ready to go")
 	channel = bot.get_channel(384395211771478026)
-	await bot.change_presence(activity=discord.Game(name="play.lgbtrealms.com")) 
+	await bot.change_presence(activity=discord.Game(name="play.lgbtrealms.com"))
 
 
 @bot.event
@@ -61,4 +59,4 @@ async def status(ctx, *, msg: str):
         await ctx.send(embed=embed)
         print("Status {}, {} Added".format(msgoptions[0], msgoptions[1]))
 
-bot.run(token)
+bot.run(os.environ['token'])
