@@ -13,7 +13,7 @@ hiimage = "http://logoonline.mtvnimages.com/uri/mgid:file:http:shared:s3.amazona
 byeimage = "https://metrouk2.files.wordpress.com/2018/03/rpdr_fi0.gif"
 channel = None
 
-token = S3Connection(os.getenv['token'])
+token = S3Connection(os.getenv('token'))
 
 @bot.event
 async def on_ready():
@@ -51,11 +51,14 @@ async def on_member_remove(member):
 
 @bot.command(pass_context=True)
 async def status(ctx, *, msg: str):
-	await ctx.message.delete()
-	msgoptions = msg.split("|")
-	embed = discord.Embed(title=None, description=None, color=0xFFD700)
-	embed.add_field(name=msgoptions[0], value=msgoptions[1], inline=False)
-	await ctx.send(embed=embed)
-	print("Status {}, {} Added".format(msgoptions[0], msgoptions[1]))
+    owner = discord.utils.get(ctx.message.guild.roles, name="Owner")
+    admin = discord.utils.get(ctx.message.guild.roles, name="Admin")
+    if owner in ctx.author.roles or admin in ctx.author.roles:
+        await ctx.message.delete()
+        msgoptions = msg.split("|")
+        embed = discord.Embed(title=None, description=None, color=0xFFD700)
+        embed.add_field(name=msgoptions[0], value=msgoptions[1], inline=False)
+        await ctx.send(embed=embed)
+        print("Status {}, {} Added".format(msgoptions[0], msgoptions[1]))
 
 bot.run(token)
