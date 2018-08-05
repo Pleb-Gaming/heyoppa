@@ -9,8 +9,8 @@ import datetime
 bot = commands.Bot(command_prefix="!")
 
 icon = "https://cdn.pbrd.co/images/HvZ0h0T.png"
-hiimage = "http://logoonline.mtvnimages.com/uri/mgid:file:http:shared:s3.amazonaws.com/articles.newnownext.com-production/wp-content/uploads/2017/03/2my81uh-1490061002.gif"
-byeimage = "https://metrouk2.files.wordpress.com/2018/03/rpdr_fi0.gif"
+hiimage = "https://cdn.pbrd.co/images/HxNfMvr.gif"
+byeimage = "https://i.giphy.com/media/3otPoqPgEe4IYEYeDS/giphy.webp"
 channel = None
 
 @bot.event
