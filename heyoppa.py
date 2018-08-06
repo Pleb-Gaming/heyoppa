@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix="!")
 
 icon = "https://cdn.pbrd.co/images/HvZ0h0T.png"
 hiimage = "https://cdn.pbrd.co/images/HxNfMvr.gif"
-byeimage = "https://i.giphy.com/media/3otPoqPgEe4IYEYeDS/giphy.webp"
+byeimage = "https://cdn.pbrd.co/images/HxPOJxh.gif"
 channel = None
 
 @bot.event
